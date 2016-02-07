@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>git-seq</title>
+        <script type="text/javascript">
+            {% include "play.js" %}
+        </script>
+    </head>
+    <body>
+        <h1>playing {{ username }}'s contributions</h1>
+        <div id="sequence">
+
+            {% for s in to_play %}
+
+            <li class="notes">{{ s }}</li>
+
+            {% endfor %}
+
+
+        </div>
+
+    </body>
+</html>
