@@ -1,13 +1,14 @@
 var context = new AudioContext();
 var frequencies = [
-    261.626,
-    293.665,
-    329.628,
-    349.228,
-    391.995,
+    493.883,
     440.000,
-    493.883
+    391.995,
+    349.228,
+    329.628,
+    293.665,
+    261.626
 ];
+var username = "{{ username }}";
 
 /**
  * to play a week of contributions:
@@ -36,4 +37,7 @@ function play(arr){
     }   
 }
 
-play({{ to_play }});
+window.onload = function(){
+    gh = GitHubCalendar(".calendar", username);
+    play({{ to_play }});
+};

@@ -1,22 +1,12 @@
 <html>
-    <head>
-        <title>git-seq</title>
-        <script type="text/javascript">
-            {% include "play.js" %}
-        </script>
-    </head>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>git-seq</title>
     <body>
-        <h1>playing {{ username }}'s contributions</h1>
-        <div id="sequence">
-
-            {% for s in to_play %}
-
-            <li class="notes">{{ s }}</li>
-
-            {% endfor %}
-
-
-        </div>
-
+      <form action="." method="POST">
+        <input id="username" type="text" name="username" placeholder="github username"></input>
+        <input id="submit" type="submit" name="submit" value="play"></input>
+      </form>
     </body>
+
 </html>

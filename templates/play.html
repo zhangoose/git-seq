@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>git-seq</title>
+    <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script type="text/javascript">
+      {% include "play.js" %}
+    </script>
+    </head>
+    <body>
+      <h1>playing {{ username }}'s contributions</h1>
+      <div class="calendar">
+        Loading {{ username }}'s contribution graph
+      </div>
+    </body>
+  </html>

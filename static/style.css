@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    font-family: Helvetica, Arial;
+}
+
+form {
+    margin-top: 10%;
+    text-align: center;
+}
+
+#username {
+   height: 4em; 
+   width: 16em;
+   font-size: 2em;
+}
+
+#submit {
+    height: 4em;
+    width: 4em;
+    font-size: 2em;
+    background-color: transparent;
+}
