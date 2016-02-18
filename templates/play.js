@@ -1,11 +1,11 @@
 var context = new AudioContext();
 var frequencies = [
-    493.883,
-    440.000,
+    1046.50,
+    783.991,
+    659.255,
+    523.251,
     391.995,
-    349.228,
     329.628,
-    293.665,
     261.626
 ];
 var username = "{{ username }}";

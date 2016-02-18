@@ -16,4 +16,4 @@ a form to enter your github username.
 
 ### `/yourgithubusername`
 
-displays your contribution graph using [github-calendar](https://github.com/IonicaBizau/github-calendar) and plays it as a sequencer.
+displays your contribution graph and plays it as a sequencer.
