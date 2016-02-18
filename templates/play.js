@@ -38,6 +38,22 @@ function play(arr){
 }
 
 window.onload = function(){
-    gh = GitHubCalendar(".calendar", username);
     play({{ to_play }});
+
+    document.getElementById("svg").innerHTML = '{{ svg }}';
+    var g = Array.prototype.slice.call(document.getElementsByTagName("g"), 1);
+    g.forEach(function(element, i){
+        setTimeout(function(){
+            if(i != 0){
+                g[i-1].setAttribute("stroke", "");
+                g[i-1].setAttribute("stroke-width", "");
+                g[i-1].setAttribute("stroke-opacity", "");
+            }
+            element.setAttribute("stroke", "#aaaaaa");
+            element.setAttribute("stroke-width", "1.7");
+            element.setAttribute("stroke-opacity", "1");
+        },i * 1000);
+    });
+    
+
 };

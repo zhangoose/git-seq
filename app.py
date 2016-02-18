@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, redirect
 import requests
+import cgi
 
 
 app = Flask(__name__)
@@ -18,6 +19,9 @@ def play(username):
     # for each `y=` attribute on each <rect>, an index mapping
     y_trans = {0:0, 13:1, 26:2, 39:3, 52:4, 65:5, 78:6}
 
+    svg = soup.find('svg', class_='js-calendar-graph-svg')
+    svg = str(svg).replace('\n', '')
+
     # looping through each <rect>
     for rect in soup.findAll('rect', class_='day'):
         # increment pagination index when starting over
@@ -26,7 +30,8 @@ def play(username):
         if rect.get('fill') != '#eeeeee':
             to_play[curr_index].append(y_trans[int(rect.get('y'))])
 
-    return render_template("play.html", username = username, to_play = to_play)
+    return render_template(
+        "play.html", username = username, to_play = to_play, svg = svg)
 
 
 @app.route("/")

@@ -8,10 +8,16 @@ form {
     text-align: center;
 }
 
+text {
+    font-family: Helvetica, Arial;
+    font-size: 10px;
+    fill: #aaaaaa;
+}
+
 #username {
-   height: 4em; 
-   width: 16em;
-   font-size: 2em;
+    height: 4em; 
+    width: 16em;
+    font-size: 2em;
 }
 
 #submit {
@@ -19,4 +25,8 @@ form {
     width: 4em;
     font-size: 2em;
     background-color: transparent;
+}
+
+#svg {
+    text-align: center;
 }
