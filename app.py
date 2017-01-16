@@ -14,7 +14,7 @@ def play(username):
 
     # instantiating an empty array of arrays for all the contributions
     to_play = [[] for i in range(54)] 
-    curr_index = 0
+    curr_index = -1
 
     # for each `y=` attribute on each <rect>, an index mapping
     y_trans = {0:0, 12:1, 24:2, 36:3, 48:4, 60:5, 72:6}
