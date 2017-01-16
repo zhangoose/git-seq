@@ -17,7 +17,7 @@ def play(username):
     curr_index = 0
 
     # for each `y=` attribute on each <rect>, an index mapping
-    y_trans = {0:0, 13:1, 26:2, 39:3, 52:4, 65:5, 78:6}
+    y_trans = {0:0, 12:1, 24:2, 36:3, 48:4, 60:5, 72:6}
 
     svg = soup.find('svg', class_='js-calendar-graph-svg')
     svg = str(svg).replace('\n', '')
